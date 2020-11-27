@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">P04_18650063_FANY_PARAMA_RELATIVE_LAYOUT</string>
+    <string-array name="daftar_makanan">
+        <item>Baso</item>
+        <item>Ayam</item>
+        <item>Mie Rebus</item>
+        <item>Nasi Padang</item>
+        <item>Ikan Bakar</item>
+        <item>Seblak</item>
+        <item>Gorengan</item>
+        <item>Mie Ayam</item>
+    </string-array>
+    <string-array name="kategori">
+        <item>Makanan</item>
+        <item>Minum</item>
+    </string-array>
+    <string-array name="pembayaran">
+        <item>Tunai</item>
+        <item>OVO</item>
+        <item>GoPay</item>
+        <item>Dana</item>
+    </string-array>
+</resources>

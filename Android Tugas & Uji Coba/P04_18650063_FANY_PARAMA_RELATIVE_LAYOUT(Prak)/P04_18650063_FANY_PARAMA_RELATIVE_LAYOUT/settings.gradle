@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "P04_18650063_FANY_PARAMA_RELATIVE_LAYOUT"

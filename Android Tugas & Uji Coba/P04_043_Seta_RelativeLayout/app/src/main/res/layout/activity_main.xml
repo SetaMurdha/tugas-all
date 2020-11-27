@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <EditText
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Pemesanan"/>
+    <EditText
+        android:id="@+id/alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nama"
+        android:hint="Alamat"/>
+    <EditText
+        android:id="@+id/telp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alamat"
+        android:hint="Telp"/>
+    <EditText
+        android:id="@+id/kode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/telp"
+        android:hint="Kode Pemesanan"/>
+    <Spinner
+        android:id="@+id/listItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kode"
+        android:entries="@array/daftar_makanan"
+        android:padding="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/times"/>
+    <Spinner
+        android:id="@id/times"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kode"
+        android:entries="@array/kategori"
+        android:layout_alignParentRight="true"/>
+
+    <Spinner
+        android:id="@+id/pembayaran"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/times"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="32dp"
+        android:entries="@array/bayar"
+        android:padding="10dp" />
+
+    <Button
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/times"
+        android:layout_alignParentRight="true"
+        android:text="SIMPAN"/>
+</RelativeLayout>
