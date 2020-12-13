@@ -5,8 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class TriggerScene : MonoBehaviour
 {
+    public GameObject WinOrLose;
+
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(1);
+        WinOrLose.SetActive(true);
+        Time.timeScale = 0f;
     }
 }
