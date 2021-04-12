@@ -32,7 +32,7 @@
     <script>
     
 
-      L.mapbox.accessToken = 'pk.eyJ1IjoicGFyYW1hYWRtYWphIiwiYSI6ImNrbjNyeGh5dTFraDgybm5ucDd2aDJ3MWIifQ.gnRXF2tLkHif9r-N2f236Q';
+      L.mapbox.accessToken = 'pk.eyJ1Ijoic2V0YTEyIiwiYSI6ImNrbmNhenl0aTB0cmoycG1pZHNpeTVveWkifQ.64dhXfC2kEBK0Red7zsDlg';
       var map = L.mapbox.map('map')
       .setView([106.0227,-6.5100],9)
       .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
