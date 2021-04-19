@@ -69,5 +69,84 @@
         window.open(e.layer.feature.properties.url);
       });
     </script>
+
+    </br></br>
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <h2>Tambah Data Lokasi</h2> <br>
+      <form method="POST" action="http://localhost/GIS/proses.php">
+        <div class="mo-3">
+          <label class="from-label">ID</label>
+          <div class="col-sm-10">
+            <input type="text" name="id" class="form-control form-control-sm">
+          </div>
+        </div>
+        <div class="mo-3">
+          <label class="form-label">Nama Lokasi</label>
+          <div class="col-sm-10">
+            <input type="text" name="nama" class="form-control form-control-sm">
+          </div>
+        </div>
+        <div class="mo-3">
+          <label class="form-label">Alamat</label>
+          <div class="col-sm-10">
+            <textarea name="alamat" class="form-control form-control-sm"></textarea>
+          </div>
+        </div>
+        <div class="mo-3">
+          <label class="form-label">Longitude</label>
+          <div class="col-sm-10">
+            <input type="text" name="lng" class="form-control form-control-sm">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Latitude</label>
+          <div class="col-sm-10">
+            <input type="text" name="lat" class="form-control form-control-sm">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Tipe</label>
+          <div class="col-sm-10">
+            <input type="text" name="tipe" class="form-control form-control-sm">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success">SUBMIT</button>
+      </form>
+    </div>
+
+    <div class="col-8">
+</br></br> 
+<table class = "table"> 
+<tr> 
+<th>ID</th> 
+<th>Nama</th> 
+<th>Alamat</th> 
+<th>Longitude</th> 
+<th>Latitude</th> 
+<th>Tipe</th> 
+<th>Action</th> 
+</tr>
+
+<?php $query1 = "SELECT * FROM markers";
+$sql1 = mysqli_query($conn, $query1); 
+while($row1=mysqli_fetch_array($sql1)) {
+echo "<tr><th>" .$row1['id']."</th> 
+<td>" .$row1['nama']."</td> 
+<td>" .$row1['alamat']."</td> 
+<td>" .$row1['longitude']."</td> 
+<td>" .$row1['latitude']."</td> 
+<td>" .$row1['tipe']."</td> 
+<td> <a href='http://localhost/GIS/proses_delete.php?id_del=" .$row1['id']."'
+  Class='btn btn-danger'>Delete</a></td>";
+}
+?>
+</table>
+</div> 
+</div> 
+</div>
+
+    
 </body>
 </html>
